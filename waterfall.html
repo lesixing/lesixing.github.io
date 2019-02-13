@@ -59,7 +59,7 @@
       var docHeight = $(document).height();
       if(scrollTop + winHeight > docHeight -100 ){
         $.ajax({
-          'url': '../data/waterfall.json',
+          'url': '../assets/data/waterfall.json',
           'dataType': 'json',
           'success': function(res){
             res.data.map(function(data){
