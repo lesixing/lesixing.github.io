@@ -3,40 +3,45 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>hello world</title>
+    <title></title>
     <style>
+      *{ margin:0; padding:0;box-sizing: border-box; }
       html{ font-size:62.5%; }
       body{ color:#666; font-size: 1.4rem; font-family: 'PingFang SC','San Francisco';}
-      a{ text-decoration: none; color:#333;}
-      a:hover{ color:#999;}
-      #app{ width:1000px; margin:0 auto;}
-      .nav{ text-align: center; border-bottom: 1px solid #ddd;padding:1rem 0;}
-      .nav a{ padding:0 2rem; font-size:1.8rem;}
+      ul li{ list-style-type: none; }
+      a{  color:#333; text-decoration: none;}
+      .container{
+        padding:30px;
+      }
+      .list li{
+        padding:8px 0;
+        border-bottom: 1px solid #ddd;
+      }
     </style>
   </head>
   <body>
-    <div id="app">
-      <nav class="nav">
-        <a href="#">About</a>
-        <a href="#">Travel</a>
-        <a href="#">Reading</a>
-        <a href="#">Writing</a>
-        <a href="#">Programming</a>
-        <a href="#">Contact</a>
-      </nav>
-      <div class="body"></div>
-      <footer class="footer">
-      </footer>
+    <div class="container">
+      <ul class="list">
+        <li><a href="/chinacolor.html">中国颜色大全</a></li>
+        <li><a href="/japancolor.html">日本颜色大全</a></li>
+        
+        <li><a href="/grid.html">CSS Grid使用</a></li>
+        <li><a href="/triangle.html">CSS实现箭头</a></li>
+        <li><a href="/layout01.html">两列等高布局01</a></li>
+        <li><a href="/layout02.html">两列等高布局02</a></li>
+        <li><a href="/layout03.html">两列等高布局03</a></li>
+        <li><a href="/holygrail01.html">CSS圣杯布局实现01</a></li>
+        <li><a href="/holygrail02.html">CSS圣杯布局实现02</a></li>
+        <li><a href="/holygrail03.html">CSS圣杯布局实现03</a></li>
+        <li><a href="/checkall.html">React实现全选/反选</a></li>
+        <li><a href="/geopicker.html">高德地图获取经纬度</a></li>
+        
+        <li><a href="/progress.html">Canvas绘制进度条</a></li>
+        <li><a href="/waterfall.html">两列瀑布流</a></li>
+        <li><a href="/countdown.html">倒计时</a></li>
+        <li><a href="/time.html">人生格子</a></li>
+        <li><a href="/sprite.html">CSS Sprite生成</a></li>
+      </ul>
     </div>
   </body>
-  <script src="../assets/libs/jquery-2.0.3.min.js"></script>
-  <script src="//f7.sjbly.cn/f17/0609/cldf/vue-min.js"></script>
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello World!'
-      }
-    })
-  </script>
 </html>
