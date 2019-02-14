@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JSON TO FORM</title>
+    <style>
+      html{ font-size:62.5%; }
+      body{ color:#666; font-size: 1.4rem; font-family: 'PingFang SC','San Francisco';}
+      a{ text-decoration: none; color:#333;}
+      a:hover{ color:#999;}
+      #app{ width:1000px; margin:0 auto;}
+      .nav{ text-align: center; border-bottom: 1px solid #ddd;padding:1rem 0;}
+      .nav a{ padding:0 2rem; font-size:1.8rem;}
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello World!'
+      }
+    })
+  </script>
+</html>
