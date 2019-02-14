@@ -39,7 +39,7 @@
   <div class="container">
     <div class="file-select">
       <input type="file" id="fileInput" multiple accept="image/*" style="display:none" />
-      <a class="file-btn" id="fileSlect">Select files</a>
+      <a class="file-btn" id="fileSelect">Select files</a>
       <a class="file-btn" id="fileGenerate">Generate</a>
     </div>
     <div class="file-list" id="fileList"></div>
@@ -51,7 +51,8 @@
 
       </div>
     </div>
-    <!-- <img id="spritePreview" /> -->
+    <img id="spritePreview" />
+    <div id="spriteIcons"></div>
   </div>
 </body>
 <script>
@@ -59,7 +60,7 @@
 window.onload = function(){
 
   var fileInput = document.getElementById('fileInput');
-  var fileSlect = document.getElementById('fileSlect');
+  var fileSelect = document.getElementById('fileSelect');
   var fileGenerate = document.getElementById('fileGenerate');
 
   fileGenerate.addEventListener("click",function(e){
@@ -98,7 +99,6 @@ window.onload = function(){
       var start = 0, x = 0;
 
       Array.from(imgs).forEach(function(img,index){
-        console.log(index)
         ctx.drawImage(img, start, 0);
         icons[img.name] = {
           'width': Math.ceil(img.width / 2) + 'px',
@@ -116,7 +116,7 @@ window.onload = function(){
       for(name in icons){
         arr.push(".icon-"+name);
       }
-      styles.push(arr.join(',')+"{display: inline-block;background: url('') no-repeat;background-size:"+image.width+" "+image.height+";}\r\n");
+      styles.push(arr.join(',')+"{display: inline-block;background: url("+canvas.toDataURL()+") no-repeat;background-size:"+image.width+" "+image.height+";}\r\n");
 
       for(name in icons){
         styles.push(".icon-"+name + "{ width: "+icons[name].width+";height: "+icons[name].height+";background-position: "+icons[name].x+" "+icons[name].y+";}\r\n");
@@ -130,16 +130,22 @@ window.onload = function(){
     spriteImage.appendChild(img);
     spriteStyle.innerHTML = '<pre><code>'+styles.join('')+'</code></pre>';
 
-    // var style = document.createElement('style');
-    // style.type = "text/css";
-    // style.innerHTML = styles.join('');
-    // document.getElementsByTagName('head')[0].appendChild(style);
+    var style = document.createElement('style');
+    style.type = "text/css";
+    style.innerHTML = styles.join('');
+    document.getElementsByTagName('head')[0].appendChild(style);
 
-    // document.getElementById('spritePreview').src = canvas.toDataURL();
+    //document.getElementById('spritePreview').src = canvas.toDataURL();
+
+    var htmls = [];
+    for(name in icons){
+      htmls.push("<div class='icon-"+name+"'></div>");
+    }
+    document.getElementById('spriteIcons').innerHTML = htmls.join('')
 
   },false)
 
-  fileSlect.addEventListener("click",function(e){
+  fileSelect.addEventListener("click",function(e){
     e.preventDefault();
     fileInput.click();
   },false)
