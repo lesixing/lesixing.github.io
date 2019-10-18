@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CSS Sprite生成双倍图</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Sprite生成单倍图</title>
   <style>
     *{ margin:0; padding:0;}
     *, *::before, *::after{box-sizing:border-box; }
@@ -38,7 +36,7 @@
 <body>
   <div class="container">
     <div class="file-select">
-      <input type="file" id="fileInput" multiple accept="image/*" style="display:none" />
+      <input type="file" id="fileInput" multiple="" accept="image/*" style="display:none">
       <a class="file-btn" id="fileSelect">Select files</a>
       <a class="file-btn" id="fileGenerate">Generate</a>
     </div>
@@ -51,10 +49,10 @@
 
       </div>
     </div>
-    <img id="spritePreview" />
+    <img id="spritePreview">
     <div id="spriteIcons"></div>
   </div>
-</body>
+
 <script>
 
 window.onload = function(){
@@ -89,8 +87,11 @@ window.onload = function(){
       document.getElementById('canvas').width = width;
       document.getElementById('canvas').height = height;
 
-      image.width = Math.ceil(width / 2) + 'px';
-      image.height = Math.ceil(height / 2) + 'px';
+      // image.width = Math.ceil(width / 2) + 'px';
+      // image.height = Math.ceil(height / 2) + 'px';
+
+      image.width = width + 'px';
+      image.height = height + 'px';
     }(canvas,imgs);
     
     var drawImage = function(canvas,imgs){
@@ -100,14 +101,21 @@ window.onload = function(){
 
       Array.from(imgs).forEach(function(img,index){
         ctx.drawImage(img, start, 0);
+        // icons[img.name] = {
+        //   'width': Math.ceil(img.width / 2) + 'px',
+        //   'height': Math.ceil(img.height / 2) + 'px',
+        //   'x': x+'px',
+        //   'y': '0px'
+        // }
         icons[img.name] = {
-          'width': Math.ceil(img.width / 2) + 'px',
-          'height': Math.ceil(img.height / 2) + 'px',
+          'width': img.width + 'px',
+          'height': img.height + 'px',
           'x': x+'px',
           'y': '0px'
         }
         start += img.width + 10;
-        x = x - ((img.width + 10) /2);
+        // x = x - ((img.width + 10) /2);
+        x = x - ((img.width + 10));
       });
     }(canvas,imgs);
 
@@ -179,4 +187,4 @@ window.onload = function(){
 
 };
 </script>
-</html>
+</body></html>
