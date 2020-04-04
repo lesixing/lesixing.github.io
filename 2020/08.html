@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CSS清除浮动</title>
+  <style type="text/css">
+    .outer {
+      width: 200px;
+      background: tomato;
+      margin: 10px;
+      position: relative;
+    }
+    .inner {
+      height: 100px;
+      width: 100px;
+      background: pink;
+      margin: 10px;
+      float: left;
+    }
+    /* 伪元素 */
+    .outer1::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    /* 创建 BFC */
+    .outer2 {
+      overflow: hidden;
+    }
+</style>
+</head>
+<body>
+  <h1>清除浮动：通过 clear:both 或 BFC 实现</h1>
+  <div class="outer outer1">
+    <div class="inner"></div>
+  </div>
+  <div class="outer outer2">
+    <div class="inner"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS绘制三角形</title>
+  <style type="text/css">
+    .box1, .box2, .box3, .box4 {
+      height: 0px;
+      width: 0px;
+      border-style: solid;
+      margin: 10px;
+    }
+    .box1 { /* 等腰直角 */
+      border-width: 100px;
+      border-color: tomato transparent transparent transparent;
+    }
+    .box2 { /* 等边 */
+      border-width: 100px 173px;
+      border-color: transparent tomato transparent transparent;
+    }
+    .box3 { /* 等腰 */
+      border-width: 100px 80px;
+      border-color: transparent transparent tomato transparent;
+    }
+    .box4 { /* 其他 */
+      border-width: 100px 90px 80px 70px;
+      border-color: transparent transparent transparent tomato;
+    }
+</style>
+</head>
+<body>
+	<h1>等腰直角</h1>
+  <div class="box1"></div>
+
+  <h1>等边</h1>
+  <div class="box2"></div>
+
+  <h1>等腰</h1>
+  <div class="box3"></div>
+
+  <h1>其他</h1>
+  <div class="box4"></div>
+</body>
+</html>
