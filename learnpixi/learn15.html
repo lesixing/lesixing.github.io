@@ -8,83 +8,134 @@
   </head>
   <body>
     <div class='control'>
-      <div class="control-action">
-        <div class="row">
-          <div class="save js-control-save">保存</div>
-        </div>
-        <div class="row">
-          <div class="arrow js-control-close"></div>
-        </div>
-      </div>
       <div class="control-main">
+        <div class="control-action js-control-action">
+          <div class="row">
+            <div class="save js-control-save">保存</div>
+          </div>
+          <div class="arrow_bg">
+            <div class="arrow js-control-close"></div>
+          </div>
+        </div>
         <ul class="control-list js-control-list">
-          <li class="control-item control-people">
-            <ul class="control-elements js-control-people" data-tag="people">
+          <li class="control-item control-role">
+            <ul class="control-elements js-control-role">
               <li class="element">
-                <div class="icon"></div><div class="text">people1</div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text">people2</div>
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
               </li>
             </ul>
           </li>
           <li class="control-item control-mask">
-            <ul class="control-elements js-control-mask" data-tag="mask">
+            <ul class="control-elements js-control-mask">
               <li class="element">
-                <div class="icon"></div><div class="text">mask1</div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text">mask2</div>
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
+              </li>
+              <li class="element">
+                <div class="icon"></div>
               </li>
             </ul>
           </li>
           <li class="control-item control-room">
-            <ul class="control-elements js-control-room" data-tag="room">
+            <ul class="control-elements js-control-room">
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
             </ul>
           </li>
           <li class="control-item control-object">
-            <ul class="control-elements js-control-objects" data-tag="object">
+            <ul class="control-elements js-control-object">
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
               <li class="element">
-                <div class="icon"></div><div class="text"></div>
+                <div class="icon"></div>
               </li>
             </ul>
           </li>
@@ -100,16 +151,16 @@
       </div>
     </div>
   </body>
-  <script src="//f8.sjbly.cn/f17/0509/hxoc/jquery.js"></script>
-  <script src="../scripts/pixi.min.js"></script>
-  <script src="../scripts/pixi-filters.js"></script>
-  <script src="../scripts/util.js"></script>
+  <script src="../assets/libs/zepto.min.js"></script>
+  <script src="../assets/libs/pixi.min.js"></script>
+  <script src="../assets/libs/util.js"></script>
   <script type="text/javascript">
-    var winWidth = document.body.clientWidth;
-    var winHeight = document.body.clientHeight;
-
-    var app = new PIXI.Application(winWidth, winHeight, { backgroundColor: 0xffffff, forceCanvas: true });
-    // var app = new PIXI.Application(winWidth, winHeight, { backgroundColor: 0xffffff, forceCanvas: true, view: document.getElementById('canvas') });
+    var app = new PIXI.Application({ backgroundColor: 0xffffff, forceCanvas: true });
+    app.renderer.view.style.position = "absolute";
+    app.renderer.view.style.display = "block";
+    app.renderer.view.style.zIndex = "100";
+    app.renderer.autoResize = true;
+    app.renderer.resize(window.innerWidth, window.innerHeight);
     document.body.appendChild(app.view);
 
     app.stage.updateLayersOrder = function () {
@@ -122,33 +173,30 @@
 
     PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
-    var outlineFilterBlue = new PIXI.filters.OutlineFilter(2, 0x99ff99);
-    var outlineFilterRed = new PIXI.filters.GlowFilter(15, 2, 1, 0xff9999, 0.5)
-
     //场景
     var scenes = {};
     //控制条
-    var bars = ['people','mask','room','object'];
+    var bars = ['role','mask','room','object'];
     //小物件
     var objects = {};
     //矩形框
     var rects = [];
-    //操作框
-    var actions = null;
     //当前操作小物件容器
     var activeContainer = null;
-    var activeObject = null;
+
+    var role = {};
 
     //清除矩形框
     function clearRects(){
       rects.forEach(function(item,index){
         item.visible = false
       });
-      actions.visible = false;
     }
 
-    //绘制场景
-    function drawScene(url){
+    //绘制房间
+    function drawRoom(index){
+      var url = "images/room/room"+index+".jpg"
+
       $.each(scenes,function(key,index){
         scenes[key].visible = false;
       })
@@ -173,29 +221,21 @@
     }
 
     //绘制角色
-    function drawRole(name) {
-      var head_img = "images/"+name + "/head.png";
-      var body_img = "images/"+ name +"/body.png";
-      var left_arm_img = "images/"+ name +"/left_arm.png";
-      var left_hand_img = "images/"+ name +"/left_hand.png";
-      var right_arm_img = "images/"+ name +"/right_arm.png";
-      var right_hand_img = "images/"+ name +"/right_hand.png";
-      var left_leg_img = "images/"+ name +"/left_leg.png";
-      var left_foot_img = "images/"+ name +"/left_foot.png";
-      var right_leg_img = "images/"+ name +"/right_leg.png";
-      var right_foot_img = "images/"+ name +"/right_foot.png";
+    function drawRole(index) {
+      var head_img = "images/role/clothes"+index + "/head.png";
+      var body_img = "images/role/clothes"+ index +"/body.png";
+      var arm_img = "images/role/clothes"+ index +"/arm.png";
+      var hand_img = "images/role/clothes"+ index +"/hand.png";
+      var leg_img = "images/role/clothes"+ index +"/leg.png";
+      var foot_img = "images/role/clothes"+ index +"/foot.png";
 
       PIXI.loader
         .add(head_img)
         .add(body_img)
-        .add(left_arm_img)
-        .add(left_hand_img)
-        .add(right_arm_img)
-        .add(right_hand_img)
-        .add(left_leg_img)
-        .add(right_leg_img)
-        .add(left_foot_img)
-        .add(right_foot_img)
+        .add(arm_img)
+        .add(hand_img)
+        .add(leg_img)
+        .add(foot_img)
         .load(function(){
           var head = new PIXI.Sprite(
               PIXI.loader.resources[head_img].texture
@@ -204,29 +244,42 @@
               PIXI.loader.resources[body_img].texture
           );
           var left_arm = new PIXI.Sprite(
-              PIXI.loader.resources[left_arm_img].texture
+              PIXI.loader.resources[arm_img].texture
           );
           var left_hand = new PIXI.Sprite(
-              PIXI.loader.resources[left_hand_img].texture
+              PIXI.loader.resources[hand_img].texture
           );
           var right_arm = new PIXI.Sprite(
-              PIXI.loader.resources[right_arm_img].texture
+              PIXI.loader.resources[arm_img].texture
           );
           var right_hand = new PIXI.Sprite(
-              PIXI.loader.resources[right_hand_img].texture
+              PIXI.loader.resources[hand_img].texture
           );
           var left_leg = new PIXI.Sprite(
-              PIXI.loader.resources[left_leg_img].texture
+              PIXI.loader.resources[leg_img].texture
           );
           var left_foot = new PIXI.Sprite(
-              PIXI.loader.resources[left_foot_img].texture
+              PIXI.loader.resources[foot_img].texture
           );
           var right_leg = new PIXI.Sprite(
-              PIXI.loader.resources[right_leg_img].texture
+              PIXI.loader.resources[leg_img].texture
           );
           var right_foot = new PIXI.Sprite(
-              PIXI.loader.resources[right_foot_img].texture
+              PIXI.loader.resources[foot_img].texture
           );
+
+          role = {
+            head: head,
+            body: body,
+            left_arm: left_arm,
+            left_hand: left_hand,
+            left_leg: left_leg,
+            left_foot: left_foot,
+            right_arm: right_arm,
+            right_hand: right_hand,
+            right_leg: right_leg,
+            right_foot: right_foot
+          }
 
           var main = new PIXI.Container();
           main.zIndex = 50;
@@ -235,65 +288,66 @@
           var right_arm_hand = new PIXI.Container();
           var right_leg_foot = new PIXI.Container();
 
-          left_arm_hand.addChild(left_arm);
+          
           left_arm_hand.addChild(left_hand);
+          left_arm_hand.addChild(left_arm);
+
           left_leg_foot.addChild(left_foot);
           left_leg_foot.addChild(left_leg);
 
-          right_arm_hand.addChild(right_arm);
           right_arm_hand.addChild(right_hand);
+          right_arm_hand.addChild(right_arm);
+
           right_leg_foot.addChild(right_foot);
           right_leg_foot.addChild(right_leg);
-
-          main.addChild(left_arm_hand);
+          
           main.addChild(right_arm_hand);
+          
+          main.addChild(body);
           main.addChild(left_leg_foot);
           main.addChild(right_leg_foot);
-          main.addChild(body);
+          main.addChild(left_arm_hand);
           main.addChild(head);
 
           main.width = main.width/2;
           main.height = main.height/2;
 
-          main.position.set(app.screen.width/2,(app.screen.height)/2);
+          main.position.set(app.screen.width/2,(app.screen.height)/2-100);
 
-          head.anchor.set(0.5);
+          head.anchor.set(0.3,0.5);
 
           body.anchor.set(0.5);
-          body.position.set(0,220);
+          body.position.set(0,240);
 
           right_arm.anchor.set(0.5);
           right_arm.position.set(120,195);
           right_hand.anchor.set(0.5,0.1);
-          right_hand.position.set(140,260);
+          right_hand.position.set(130,200);
 
-          left_arm_hand.position.set(-120,150);
-          left_arm_hand.pivot.set(50,50);
-          left_arm.position.set(-10,0);
-          left_hand.position.set(40,130);
-          left_arm.anchor.set(0);
-          left_hand.anchor.set(0.5,0.1);
+          left_arm_hand.position.set(-70,140);
+          left_arm_hand.pivot.set(25,20);
+          left_hand.position.set(left_arm.width/2,105);
+          left_hand.pivot.set(left_arm.width/2,left_arm.width/2);
 
-          right_arm_hand.position.set(110,150);
-          right_arm_hand.pivot.set(50,50);
+          right_arm_hand.position.set(70,140);
+          right_arm_hand.pivot.set(20,20);
           right_arm.position.set(0,0);
-          right_hand.position.set(80,120);
+          right_hand.position.set(26,105);
           right_arm.anchor.set(0);
-          right_hand.anchor.set(0.5,0);
+          right_hand.anchor.set(0.5,0.2);
+          right_arm_hand.rotation = -0.2
 
-          left_leg_foot.position.set(-30,340);
-          left_leg_foot.pivot.set(50,50)
+          left_leg_foot.position.set(-40,380);
+          left_leg_foot.pivot.set(20,20)
           left_leg.position.set(0,0);
-          left_foot.position.set(30,100);
-          left_leg.anchor.set(0)
-          left_foot.anchor.set(0.5,0)
+          left_foot.position.set(25,105);
+          left_foot.pivot.set(left_leg.width/2,left_leg.width/2)
 
-          right_leg_foot.position.set(50,340);
-          right_leg_foot.pivot.set(50,50)
+          right_leg_foot.position.set(40,380);
+          right_leg_foot.pivot.set(20,20)
           right_leg.position.set(0,0);
-          right_foot.position.set(60,115);
-          right_leg.anchor.set(0)
-          right_foot.anchor.set(0.5,0.1);
+          right_foot.position.set(25,105);
+          right_foot.pivot.set(right_leg.width/2,right_leg.width/2)
 
           left_hand.interactive = true;
           right_hand.interactive = true;
@@ -348,7 +402,6 @@
 
           main.on('pointerdown', function(event){
                 this.data = event.data;
-                this.alpha = 0.5;
                 this.dragging = true;
               })
               .on('pointerup', onDragEnd)
@@ -360,7 +413,9 @@
     }
 
     //绘制小物件
-    function drawObject(url){
+    function drawObject(index){
+      clearRects();
+      var url = "/learnpixi/images/object/object" + index + '.png';
       var object = null;
 
       if(objects[url]){
@@ -398,13 +453,16 @@
 
         rects.push(rect);
 
+        var actions = drawActions();
+       
+        rect.addChild(actions);
         container.addChild(rect);
         container.addChild(object);
 
         container.pivot.set(container.width/2,container.height/2);
-
         container.rotation = 0;
-        
+        actions.position.set(container.width+12,-12);
+
         container
           .on('pointerdown', onObjectDragStart)
           .on('pointerup', onDragEnd)
@@ -416,24 +474,23 @@
     }
 
     //绘制操作按钮
-    function drawAction(){
-      actions = new PIXI.Container();
-      actions.position.set(app.screen.width-50,50);
-      actions.filters = [outlineFilterBlue];
-      actions.visible = false;
-      actions.zIndex = 5;
+    function drawActions(){
+      var container = new PIXI.Container();
+      container.zIndex = 5;
 
       var close = PIXI.Sprite.fromImage("images/close.png");
+      close.scale.set(0.8);
       close.position.set(0,0);
       close.interactive = true;
       close.buttonMode = true;
       close.on('pointerdown', function(){
         app.stage.removeChild(activeContainer);
-        actions.visible = false;
+        container.visible = false;
       });
 
       var zoomin = PIXI.Sprite.fromImage("images/zoomin.png");
-      zoomin.position.set(0,35);
+      zoomin.scale.set(0.8);
+      zoomin.position.set(0,25);
       zoomin.interactive = true;
       zoomin.buttonMode = true;
       zoomin.on('pointerdown', function(){
@@ -442,7 +499,8 @@
       });
 
       var zoomout = PIXI.Sprite.fromImage("images/zoomout.png");
-      zoomout.position.set(0,70);
+      zoomout.scale.set(0.8);
+      zoomout.position.set(0,50);
       zoomout.interactive = true;
       zoomout.buttonMode = true;
       zoomout.on('pointerdown', function(){
@@ -451,7 +509,8 @@
       });
 
       var rotate = PIXI.Sprite.fromImage("images/rotate.png");
-      rotate.position.set(0,105);
+      rotate.scale.set(0.8);
+      rotate.position.set(0,75);
       rotate.interactive = true;
       rotate.buttonMode = true;
       rotate
@@ -460,61 +519,94 @@
           activeContainer.rotation = activeContainer.degrees * Math.PI / 180;
         })
 
-      actions.addChild(close);
-      actions.addChild(zoomin);
-      actions.addChild(zoomout);
-      actions.addChild(rotate);
+      container.addChild(close);
+      container.addChild(zoomin);
+      container.addChild(zoomout);
+      container.addChild(rotate);
 
-      app.stage.addChild(actions);
+      return container;
     }
 
-    drawScene("images/scene/scene1.png");
-    drawRole("hulk");
-    drawAction();
+    // 绘制面具
+    function drawMask(index){
+      var url = "/learnpixi/images/mask/mask" + index + '.png';
+      var texture = PIXI.Texture.fromImage(url);
+      role.head.texture = texture;
+    }
 
+    // 绘制衣服
+    function drawClothes(index){
+      role.body.texture = PIXI.Texture.fromImage('/learnpixi/images/role/clothes'+index+'/body.png');
+      role.left_arm.texture = PIXI.Texture.fromImage('/learnpixi/images/role/clothes'+index+'/arm.png');
+      role.left_hand.texture = PIXI.Texture.fromImage('/learnpixi/images/role/clothes'+index+'/hand.png');
+      role.left_leg.texture = PIXI.Texture.fromImage('/learnpixi/images/role/clothes'+index+'/leg.png');
+      role.left_foot.texture = PIXI.Texture.fromImage('/learnpixi/images/role/clothes'+index+'/foot.png');
+      role.right_arm.texture = PIXI.Texture.fromImage('/learnpixi/images/role/clothes'+index+'/arm.png');
+      role.right_hand.texture = PIXI.Texture.fromImage('/learnpixi/images/role/clothes'+index+'/hand.png');
+      role.right_leg.texture = PIXI.Texture.fromImage('/learnpixi/images/role/clothes'+index+'/leg.png');
+      role.right_foot.texture = PIXI.Texture.fromImage('/learnpixi/images/role/clothes'+index+'/foot.png');
+    }
+
+    function scrollIntoView(dom){
+      dom.addClass('active').siblings().removeClass('active')
+      dom[0].scrollIntoView({ block: "end", behavior: "smooth" })
+    }
 
     $(function(){
+
+      drawRoom(1);
+      drawRole(1);
+
       $('.js-control-bar').on('click','li',function(){
         var index = $(this).index();
         var bar = bars[index];
         $('.js-control-list .control-item').hide();
         $('.js-control-list .control-'+bar).show();
-        $(this).addClass('active').siblings().removeClass('active')
-        $(this)[0].scrollIntoView({ block: "end", behavior: "smooth" })
+        scrollIntoView($(this));
         $('.js-control-close').removeClass('close');
+        $('.js-control-action').css('bottom','80px')
       });
 
-      $('.js-control-objects').on('click','li',function(){
-        $(this).addClass('active').siblings().removeClass('active');
-        $(this)[0].scrollIntoView({ block: "end", behavior: "smooth" });
+      $('.js-control-role').on('click','li',function(){
+        scrollIntoView($(this));
         var index = $(this).index() + 1;
-        var tag = $(this).parent().attr('data-tag');
-        var url = "/images/object/"+ tag + "" + index + '.png';
-        drawObject(url);
+        drawClothes(index);
+      });
+
+      $('.js-control-mask').on('click','li',function(){
+        scrollIntoView($(this));
+        var index = $(this).index() + 1;
+        drawMask(index);
+      });
+
+      $('.js-control-object').on('click','li',function(){
+        scrollIntoView($(this));
+        var index = $(this).index() + 1;
+        drawObject(index);
       });
 
       $('.js-control-room').on('click','li',function(){
-        $(this).addClass('active').siblings().removeClass('active');
-        $(this)[0].scrollIntoView({ block: "end", behavior: "smooth" });
+        scrollIntoView($(this));
         var index = $(this).index() + 1;
-        var tag = $(this).parent().attr('data-tag');
-        var url = "/images/"+ tag + "" + index + '.jpg';
-        drawScene(url);
+        drawRoom(index);
       });
 
       $('.js-control-close').on('click',function(){
         if($(this).hasClass('close')){
           $(this).removeClass('close');
-          $('.js-control-bar li.active').trigger('click')
+          $('.js-control-bar li.active').trigger('click');
+          $('.js-control-action').css('bottom','80px')
         }else{
           $(this).addClass('close');
           $('.js-control-list .control-item').hide();
+          $('.js-control-action').css('bottom','0px')
         }
       });
 
       $('.js-control-save').on('click',function(){
         // var image = app.view.toDataURL('image/png');
         // console.log(image);
+        return false;
         var formData = new FormData();
 
         app.view.toBlob(function(blob){
@@ -526,7 +618,7 @@
               var response = JSON.parse(xhr.responseText);
             }
           }
-          xhr.open("POST",'http://www.shijiebang.com/app/halloween');
+          xhr.open("POST",'');
           xhr.send(formData);
         },'image/png');
       });

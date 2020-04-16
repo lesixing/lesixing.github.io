@@ -146,8 +146,8 @@
       </div>
     </div>
   </body>
-  <script src="//f8.sjbly.cn/f17/0509/hxoc/jquery.js"></script>
-  <script src="../scripts/pixi.min.js"></script>
+  <script src="../assets/libs/jquery-3.2.1.min.js"></script>
+  <script src="../assets/libs/pixi.min.js"></script>
   <script type="text/javascript">
     var winWidth = document.body.clientWidth;
     var winHeight = document.body.clientHeight;
@@ -158,7 +158,7 @@
     var bars = ['people','toward','cloth','mask','hair','room','other'];
     var scenes = {};
 
-    createScene('images/room1.jpg');
+    createScene('images/room/room1.jpg');
 
     function createObject(url){
       var object = PIXI.Sprite.fromImage(url);
@@ -243,7 +243,7 @@
         $(this)[0].scrollIntoView({ block: "end", behavior: "smooth" });
         var index = $(this).index() + 1;
         var tag = $(this).parent().attr('data-tag');
-        var url = "/images/"+ tag + "" + index + '.jpg';
+        var url = "/learnpixi/images/room/"+ tag + "" + index + '.jpg';
         createScene(url)
       });
     });
