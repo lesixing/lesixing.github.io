@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <title>BFC示例3</title>
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+      }
+      .left{
+          background: #73DE80;    /* 绿色 */
+          opacity: 0.5;
+          border: 3px solid #F31264;
+          width: 200px;
+          height: 200px;
+          float: left;
+      }
+      .right{                        /* 粉色 */
+          background: #EF5BE2;
+          opacity: 0.5;
+          border: 3px solid blue;
+          width:400px;
+          min-height: 100px;
+      }
+      .box{
+          background:#888;
+          height: 100%;
+          margin-left: 50px;
+      }
+      .bfc{
+        overflow: hidden;
+      }
+      .little{
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        float: left;
+    }
+  </style>
+  </head>
+  <body>
+    <div class='box bfc'>
+      <div class='left'> </div>
+      <div class='right'> 
+        <div class='little'></div>
+        <div class='little'></div>
+        <div class='little'></div>
+      </div>
+    </div>
+    <div style="clear:both;margin: 30px;">
+      <p>将一些小块添加到粉色框中；</p>
+      <p>由于粉色框没有创建新的BFC，因此粉色框中白色块受到了绿色框的影响，被挤到了右边去了。先不管这个，看看白色块的margin。</p>
+    </div>
+  </body>
+</html>
